@@ -1,0 +1,11 @@
+TC1 Results
+Costo total de ventas: 2481.86
+Tiempo total de ejecución: 0.014263629913330078 segundos.
+
+TC2 Results
+Costo total de ventas: 166568.23
+Tiempo total de ejecución: 0.030498504638671875 segundos.
+
+TC3 Results
+Costo total de ventas: 165235.37
+Tiempo total de ejecución: 0.002556324005126953 segundos.
