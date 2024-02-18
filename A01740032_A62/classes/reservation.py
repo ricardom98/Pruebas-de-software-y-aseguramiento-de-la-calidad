@@ -1,7 +1,7 @@
 '''Reservation Class'''
 
-from classes.hotel import Hotel
-from classes.customer import Customer
+from A01740032_A62.classes.hotel import Hotel
+from A01740032_A62.classes.customer import Customer
 
 class Reservation:
     def __init__(self, reservation_id, customer: Customer, hotel: Hotel, start_date, end_date, status="activa"):

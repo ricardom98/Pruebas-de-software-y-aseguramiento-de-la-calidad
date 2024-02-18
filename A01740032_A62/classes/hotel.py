@@ -1,6 +1,7 @@
 '''Hotel Class'''
 
-from classes.customer import Customer
+import datetime
+from A01740032_A62.classes.customer import Customer
 
 class Hotel:
     def __init__(self, id, nombre, ubicacion, num_habitaciones):
@@ -50,11 +51,22 @@ class Hotel:
         print(f"Habitaciones disponibles: {self.habitaciones_disponibles}")
 
     def reservar_cuarto(self, customer: Customer):
-        '''
-        Reserves a room
-        '''
-        # pylint: disable=import-outside-toplevel
-        from classes.reservation import Reservation
-        reservation = Reservation(hotel=self, customer=customer)
+        from .reservation import Reservation  # Asegúrate de que esta importación funcione correctamente
+
+        # Generar un ID de reservación ficticio y fechas de ejemplo
+        reservation_id = len(self.reservations) + 1  # Simplicidad: el ID se basa en el número de reservas
+        start_date = datetime.date.today()
+        end_date = start_date + datetime.timedelta(days=1)  # Ejemplo: reserva por un día
+
+        # Crear la reserva con todos los argumentos requeridos
+        reservation = Reservation(reservation_id=reservation_id, customer=customer, hotel=self, start_date=start_date, end_date=end_date, status="activa")
         self.reservations.append(reservation)
         return reservation
+    
+    def __init__(self, id, nombre, ubicacion, num_habitaciones):
+        self.id = id
+        self.nombre = nombre
+        self.ubicacion = ubicacion
+        self.num_habitaciones = num_habitaciones
+        self.habitaciones_disponibles = num_habitaciones
+        self.reservations = []
