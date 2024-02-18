@@ -1,3 +1,7 @@
+'''Hotel Class'''
+
+from classes.customer import Customer
+
 class Hotel:
     def __init__(self, id, nombre, ubicacion, num_habitaciones):
         self.id = id
@@ -44,3 +48,13 @@ class Hotel:
         print(f"Ubicación: {self.ubicacion}")
         print(f"Número total de habitaciones: {self.num_habitaciones}")
         print(f"Habitaciones disponibles: {self.habitaciones_disponibles}")
+
+    def reservar_cuarto(self, customer: Customer):
+        '''
+        Reserves a room
+        '''
+        # pylint: disable=import-outside-toplevel
+        from classes.reservation import Reservation
+        reservation = Reservation(hotel=self, customer=customer)
+        self.reservations.append(reservation)
+        return reservation
