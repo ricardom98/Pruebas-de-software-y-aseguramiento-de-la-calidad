@@ -1,7 +1,6 @@
 '''Class para provar el módulo de hotel'''
 
 import unittest
-from unittest.mock import patch
 from A01740032_A62.classes.hotel import Hotel
 from A01740032_A62.classes.customer import Customer
 

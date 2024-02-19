@@ -36,7 +36,7 @@ class TestCustomer(unittest.TestCase):
         expected_output = ("ID del Cliente: C001\n"
                            "Nombre: Juan Pérez\n"
                            "Contacto: juanperez@example.com\n")
-        with unittest.mock.patch('sys.stdout', new=io.StringIO()) as fake_out:
+        with patch('sys.stdout', new=io.StringIO()) as fake_out:
             self.customer.mostrar_informacion()
             self.assertEqual(fake_out.getvalue(), expected_output)
 
@@ -44,6 +44,3 @@ class TestCustomer(unittest.TestCase):
 # Si ejecutas este script directamente, corre los tests
 if __name__ == '__main__':
     unittest.main()
-
-
-## HOLA
