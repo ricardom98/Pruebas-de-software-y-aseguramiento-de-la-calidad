@@ -1,11 +1,13 @@
-# test_hotel.py
+'''Class para provar el módulo de reservation'''
+
 import unittest
-from unittest.mock import patch
 from A01740032_A62.classes.hotel import Hotel
 from A01740032_A62.classes.customer import Customer
 
+
 class TestHotel(unittest.TestCase):
-    
+    '''Class para provar el módulo de reservation'''
+
     def setUp(self):
         """Este método se ejecuta antes de cada prueba"""
         self.hotel = Hotel(1, "Hotel Prueba", "Ciudad Prueba", 100)
@@ -32,7 +34,8 @@ class TestHotel(unittest.TestCase):
         customer = Customer("C001", "Juan Pérez", "juan.perez@example.com")
         initial_reservations_count = len(self.hotel.reservations)
         self.hotel.reservar_cuarto(customer)
-        self.assertEqual(len(self.hotel.reservations), initial_reservations_count + 1)
+        self.assertEqual(len(self.hotel.reservations),
+                         initial_reservations_count + 1)
         # Verifica que la última reservación añadida tenga el cliente correcto
         self.assertEqual(self.hotel.reservations[-1].customer, customer)
 
