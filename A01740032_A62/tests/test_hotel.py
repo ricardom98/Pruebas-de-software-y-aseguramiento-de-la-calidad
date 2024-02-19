@@ -1,4 +1,4 @@
-'''Class para provar el módulo de reservation'''
+'''Class para provar el módulo de hotel'''
 
 import unittest
 from A01740032_A62.classes.hotel import Hotel
@@ -6,7 +6,7 @@ from A01740032_A62.classes.customer import Customer
 
 
 class TestHotel(unittest.TestCase):
-    '''Class para provar el módulo de reservation'''
+    '''Class para provar el módulo de hotel'''
 
     def setUp(self):
         """Este método se ejecuta antes de cada prueba"""

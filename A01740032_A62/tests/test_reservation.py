@@ -1,4 +1,4 @@
-'''Class for testing reservation module'''
+'''Class para provar el módulo de reservation'''
 
 import unittest
 from unittest.mock import patch
@@ -9,7 +9,7 @@ from A01740032_A62.classes.reservation import Reservation
 
 
 class TestReservation(unittest.TestCase):
-    '''Class for testing reservation module'''
+    '''Class para provar el módulo de reservation'''
 
     def setUp(self):
         """Este método se ejecuta antes de cada prueba"""
