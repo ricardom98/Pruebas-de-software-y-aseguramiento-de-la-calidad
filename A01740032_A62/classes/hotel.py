@@ -51,7 +51,7 @@ class Hotel:
         print(f"Habitaciones disponibles: {self.habitaciones_disponibles}")
 
     def reservar_cuarto(self, customer: Customer):
-        from .reservation import Reservation  # Asegúrate de que esta importación funcione correctamente
+        from .reservation import Reservation  
 
         # Generar un ID de reservación ficticio y fechas de ejemplo
         reservation_id = len(self.reservations) + 1  # Simplicidad: el ID se basa en el número de reservas

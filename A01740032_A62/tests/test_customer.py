@@ -2,6 +2,7 @@
 
 import io
 import unittest
+from unittest.mock import patch
 from A01740032_A62.classes.customer import Customer
 
 
@@ -43,3 +44,6 @@ class TestCustomer(unittest.TestCase):
 # Si ejecutas este script directamente, corre los tests
 if __name__ == '__main__':
     unittest.main()
+
+
+## HOLA
